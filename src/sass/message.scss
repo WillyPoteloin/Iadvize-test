@@ -1,0 +1,28 @@
+.chat-message {
+    display: block;
+    width: 100%;
+    float:left;
+    border-bottom: 1px solid rgba(#000, 0.3);
+
+    .header {
+        padding: 5px;
+        border-bottom: 1px solid rgba(#000, 0.1);
+
+        span {
+            display: inline-block;
+
+            &.date {
+                float: right;
+            }
+        }
+    }
+
+    .content {
+        padding: 5px;
+
+    }
+
+    &.mine {
+        float: right;
+    }
+}

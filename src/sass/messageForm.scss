@@ -1,0 +1,22 @@
+.chat-form {
+
+    display: flex;
+
+    input[type="text"] {
+        flex: 9 1 auto;
+        padding: 0px 5px;
+        height: 25px;
+        border: none;
+        outline: none;
+    }
+
+    input[type="submit"] {
+        flex: 1 1 auto;
+        height: 25px;
+        background-color: #2196F3;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        outline: none;
+    }
+}
