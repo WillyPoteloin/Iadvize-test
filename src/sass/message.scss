@@ -3,6 +3,7 @@
 .chat-message {
     display: block;
     float:left;
+    max-width: 50%;
     margin: 10px;
     clear: both;
 
@@ -27,12 +28,19 @@
 
     .content {
         display: inline-block;
-        max-width: 45%;
+        max-width: 80%;
         padding: 5px 10px;
         background-color: rgba(#000, 0.1);
         border-radius: 3px;
         box-shadow: 1px 1px 3px 0px rgba(#000, 0.5);
+        white-space: pre-wrap;
 
+        span {
+            display: inline-block;
+            width: 100%;
+            overflow: hidden;
+            word-wrap: break-word;
+        }
     }
 
     .footer {
@@ -46,16 +54,10 @@
     &.mine {
         float: right;
         color: #fff;
+        text-align: right;
 
         .content {
             background-color: rgba($blue, 1);
-        }
-
-        .footer {
-
-            .date {
-                float: right;
-            }
         }
     }
 }

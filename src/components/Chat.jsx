@@ -9,6 +9,10 @@ import MessageForm from './MessageForm';
 import Sass from '../sass/chat.scss';
 
 var Chat = React.createClass ({
+    propTypes: {
+        name: React.PropTypes.string.isRequired,
+        current_user: React.PropTypes.object.isRequired
+    },
     render() {
         return (
 			<div className="chat">

@@ -8,8 +8,12 @@ import Sass from '../sass/message.scss';
 
 var Message = React.createClass({
 	propTypes: {
-
-	},
+        id: React.PropTypes.number.isRequired,
+        text: React.PropTypes.string.isRequired,
+        date: React.PropTypes.string.isRequired,
+        user: React.PropTypes.object.isRequired,
+        current_user: React.PropTypes.object.isRequired
+    },
 	render() {
 
 		var messageClassNames = classNames(

@@ -8,6 +8,10 @@ import Message from './Message';
 import Sass from '../sass/messageList.scss';
 
 var MessageList = React.createClass ({
+	propTypes: {
+        messages: React.PropTypes.array.isRequired,
+        current_user: React.PropTypes.object.isRequired
+    },
 	scrollBottom: function() {
 		this._list.scrollTop = this._list.scrollHeight;
 	},

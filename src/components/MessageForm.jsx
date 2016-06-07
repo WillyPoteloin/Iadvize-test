@@ -9,7 +9,7 @@ import {addMessage} from '../actions';
 // Import styles
 import Sass from '../sass/messageForm.scss';
 
-var MessageForm = React.createClass({
+export var MessageForm = React.createClass({
 	getInitialState: function() {
 		return {
 			message: {
@@ -45,13 +45,11 @@ var MessageForm = React.createClass({
 	render() {
 		return (
             <form className="chat-form" onSubmit={this.onSubmitHandler}>
-                <input type="text" value={this.state.message.text} onChange={this.onTextChange}/>
-                <input type="submit" value="Send"/>
+                <input className="chat-form-input" type="text" value={this.state.message.text} onChange={this.onTextChange}/>
+                <input className="chat-form-submit" type="submit" value="Send"/>
             </form>
 		)
 	}
 });
 
-MessageForm = connect()(MessageForm);
-
-export default MessageForm;
+export default connect()(MessageForm);
