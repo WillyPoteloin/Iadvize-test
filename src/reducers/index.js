@@ -1,7 +1,9 @@
+// Define initial state
 const initialState = {
     messages: [],
 }
 
+// Reducer
 const chat = (state = initialState, action) => {
     switch (action.type) {
         case 'ADD_MESSAGE':

@@ -22,7 +22,7 @@ const app = document.createElement("div");
 app.setAttribute('id', 'chat-app');
 document.body.appendChild(app);
 
-// Display the chat component in the root app element
+// Display the App component in the root app element
 ReactDOM.render(
     <Provider store={store}>
         <App/>

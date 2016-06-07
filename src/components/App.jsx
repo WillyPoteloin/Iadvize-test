@@ -28,8 +28,8 @@ var App = React.createClass({
     render() {
         return(
             <div>
-            <Chat name='Chat 1' current_user={this.getUser(0)} />
-            <Chat name='Chat 2' current_user={this.getUser(1)} />
+                <Chat name='Chat 1' current_user={this.getUser(0)} />
+                <Chat name='Chat 2' current_user={this.getUser(1)} />
             </div>
         );
     }

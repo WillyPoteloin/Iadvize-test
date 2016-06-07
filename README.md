@@ -24,6 +24,14 @@ npm run dev
 
 ## Running test
 
+Use of Mocha
+
 ```
 npm run test
 ```
+
+### Others Libraries
+
+MomentJs http://momentjs.com/
+
+Classnames https://github.com/JedWatson/classnames
