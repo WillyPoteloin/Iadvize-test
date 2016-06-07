@@ -10,8 +10,8 @@ var Chat = React.createClass ({
         return (
 			<div className="chat">
 				<h1>{this.props.name}</h1>
-				<MessageList messages={this.props.messages} />
-				<MessageForm addMessage={this.props.addMessage}/>
+				<MessageList messages={this.props.messages} current_user={this.props.current_user} />
+				<MessageForm addMessage={this.props.addMessage} current_user={this.props.current_user} />
 			</div>
         );
     }

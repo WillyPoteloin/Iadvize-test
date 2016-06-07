@@ -9,13 +9,30 @@ var App = React.createClass({
             messages: [
                 {
                     id:1,
-                    user: 'Me',
+                    user: {
+                      name: 'Kylo Ren',
+                      picture: ''
+                    },
                     text:'Comment vas-tu ?',
                     date: Moment().format('X')
                 }
             ],
             addMessage: this.addMessage
         }
+    },
+    getUser: function(index) {
+      let users = [
+        {
+          name: 'Kylo Ren',
+          picture: ''
+        },
+        {
+          name: 'Jabba le Hutt',
+          picture: ''
+        }
+      ];
+
+      return users[index];
     },
     addMessage: function(message) {
       let messages = this.state.messages;
@@ -30,8 +47,8 @@ var App = React.createClass({
     render() {
         return(
             <div>
-            <Chat {...this.state} name='Chat 1' />
-            <Chat {...this.state} name='Chat 2' />
+            <Chat {...this.state} name='Chat 1' current_user={this.getUser(0)} />
+            <Chat {...this.state} name='Chat 2' current_user={this.getUser(1)}/>
             </div>
         );
     }

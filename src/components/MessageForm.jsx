@@ -7,7 +7,7 @@ var MessageForm = React.createClass({
 		return {
 			message: {
 				text: '',
-				user: 'Test',
+				user: this.props.current_user,
 			}
 		}
 	},

@@ -1,13 +1,15 @@
+@import "variables";
+
 .chat-message {
     display: block;
     width: 100%;
     float:left;
-    border-bottom: 1px solid rgba(#000, 0.3);
+    background-color: rgba(#000, 0.0125);
+    border-bottom: 1px solid rgba(#000, 0.1);
 
     .header {
-        padding: 5px;
-        border-bottom: 1px solid rgba(#000, 0.1);
-
+        width: 50%;
+        padding: 5px 10px;
         span {
             display: inline-block;
 
@@ -18,11 +20,13 @@
     }
 
     .content {
-        padding: 5px;
+        width: 50%; 
+        padding: 5px 10px;
 
     }
 
     &.mine {
         float: right;
+        background-color: rgba($blue, 0.1);
     }
 }
