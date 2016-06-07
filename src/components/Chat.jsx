@@ -9,9 +9,9 @@ var Chat = React.createClass ({
     render() {
         return (
 			<div className="chat">
-				<h1>Chat</h1>
+				<h1>{this.props.name}</h1>
 				<MessageList messages={this.props.messages} />
-				<MessageForm/>
+				<MessageForm addMessage={this.props.addMessage}/>
 			</div>
         );
     }

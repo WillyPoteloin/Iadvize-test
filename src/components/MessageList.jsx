@@ -8,7 +8,7 @@ var MessageList = React.createClass ({
 	render() {
 
 		let messages = this.props.messages.map(function(message, index){
-			return <Message key={message.id} {...message} />
+			return <Message key={index} {...message} />
 		});
 
 		return (

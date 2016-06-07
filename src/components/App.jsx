@@ -14,13 +14,24 @@ var App = React.createClass({
                     date: Moment().format('X')
                 }
             ],
+            addMessage: this.addMessage
         }
+    },
+    addMessage: function(message) {
+      let messages = this.state.messages;
+
+      // Setting the message date
+      message.date = Moment().format('X');
+
+      messages.push(message);
+
+      this.setState(Object.assign({}, this.state, {messages: messages}));
     },
     render() {
         return(
             <div>
-            <Chat {...this.state} />
-            <Chat {...this.state} />
+            <Chat {...this.state} name='Chat 1' />
+            <Chat {...this.state} name='Chat 2' />
             </div>
         );
     }
