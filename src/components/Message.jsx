@@ -1,11 +1,15 @@
+// Import libraries
 import React from 'react';
 import Moment from 'moment';
 import classNames from 'classnames';
 
+// Import styles
 import Sass from '../sass/message.scss';
 
 var Message = React.createClass({
+	propTypes: {
 
+	},
 	render() {
 
 		var messageClassNames = classNames(
@@ -18,11 +22,13 @@ var Message = React.createClass({
 		return (
 			<div className={messageClassNames}>
 				<div className="header">
-					<span className="user">{this.props.user.name}</span>
-					<span className="date">{Moment(this.props.date, 'X').format('Y-DD-MM')}</span>
+					<span className="user"><img src={this.props.user.picture} alt={this.props.user.name} /></span>
 				</div>
 				<div className="content">
 					<span>{this.props.text}</span>
+				</div>
+				<div className="footer">
+					<span className="date">{Moment(this.props.date, 'X').fromNow()}</span>
 				</div>
 			</div>
 		)

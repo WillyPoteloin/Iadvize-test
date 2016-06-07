@@ -26,6 +26,13 @@ module.exports = {
 				]
 			},
 			{
+				test: /\.jpe?g|png$/,
+				include: /images/,
+				loaders: [
+					'file'
+				]
+			},
+			{
 				test: /\.jsx?$/,
 				exclude: /node_modules/,
 				loaders: [
